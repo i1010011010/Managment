@@ -1,4 +1,6 @@
 package service;
+import api.UserService;
+import service.UserServiceImpl;
 
 import Store.User;
 import api.UserService;
@@ -14,11 +16,11 @@ public class UserServiceTest
     public void testGetAllUsers()
     {
         List<User>users = new ArrayList<User>();
-        users.add(new User,"admin", "admin");
-        users.add(new User, "pablo", "admin");
+        users.add(new User(1l,"admin", "admin"));
+        users.add(new User(2l, "pablo", "admin"));
 
         UserServiceImpl usersService = new UserServiceImpl(users);
-        List<User>usersFromTestClass = userService.getAllUsers();
+        List<User>usersFromTestClass = usersService.getAllUsers();
 
         Assert.assertEquals(users,usersFromTestClass);
     }
@@ -31,7 +33,7 @@ public class UserServiceTest
         users.add(user);
 
         UserServiceImpl userService = new UserServiceImpl();
-        userService.add(user);
+        userService.addUser(user);
         List<User>usersFromTestClass = userService.getAllUsers();
 
         Assert.assertEquals(users, usersFromTestClass);
@@ -47,8 +49,8 @@ public class UserServiceTest
         users.add(admin);
         users.add(pablo);
 
-        UserServiceImpl userService = UserServiceImpl(users);
-        userService.removeUserById(user);
+        UserServiceImpl userService = new UserServiceImpl(users);
+        userService.removeUserById(1l);
         users.remove(admin);
         List<User>usersFromTestClass = userService.getAllUsers();
 

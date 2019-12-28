@@ -9,12 +9,12 @@ public interface UserService
 {
     List<User> getAllUsers();
     void addUser(User user);
-    void removeUserById(long userId);
+    void removeUserById(Long userId);
 
 
-    List<Integer>numbers = new ArrayList<Integer>();
 
-    numbers.add(5);
+
+
 
 
 
