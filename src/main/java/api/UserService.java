@@ -1,4 +1,6 @@
 package api;
 
-public interface UserService {
+public interface UserService
+{
+
 }
