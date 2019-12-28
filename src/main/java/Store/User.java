@@ -1,12 +1,16 @@
 package Store;
 
-public class User
+import api.UserService;
+
+import java.util.List;
+
+public class User implements UserService
 {
     private long id;
     private String login;
     private String password;
 
-    User(long id, String login,String password)
+    public User(long id, String login, String password)
     {
         this.id = id;
         this.login = login;
@@ -37,4 +41,21 @@ public class User
                 '}';
     }
 
+    public void addUser(User user)
+    {
+
+    }
+
+    public List<User> getAllUsers()
+    {
+        return null;
+    }
+
+    public void removeUserById(long userId)
+    {
+    numbers.add(5);
+    numbers.add(7);
+    numbers.add(8);
+
+    }
 }
