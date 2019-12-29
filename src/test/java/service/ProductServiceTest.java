@@ -30,9 +30,6 @@ public class ProductServiceTest {
         products.add(new Cloth(1L, "T-SHIRT", 35.0f, (int) 0.3f, "Black", 4));
         products.add(new Boots(1L, "T-SHIRT", 35.0f, (int) 0.3f, "Black", 4));
 
-        //new ArrayList<Product>(products) - utworzenie kopii listy, więcej o kopiowaniu i adresach w 4 tygodniu
-        //dzieki wykonaniu kopii mamy dwa różne obiekty zamiast jedngo
-        //jeden siedzi w productService, drugi w naszym tescie
         ProductServiceImpl productService = new ProductServiceImpl(new ArrayList<Product>(products));
         products.add(new Cloth(1L, "T-SHIRT", 35.0f, (int) 0.3f, "Black", 4));
         List<Product> listFromTestClass = productService.getAllProducts();
