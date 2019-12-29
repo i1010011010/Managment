@@ -10,7 +10,7 @@ public class Product
     String color;
     int productCount;
 
-    Product(long id,String productName,float price,int weight,String color,int productCount)
+    public Product(long id,String productName,float price,int weight,String color,int productCount)
     {
         this.id = id;
         this.productName = productName;
